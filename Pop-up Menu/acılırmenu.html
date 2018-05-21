@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<style type="text/css">
+ul,li{margin:0; padding:0; list-style:none;}
+#menu{height:40px;}
+#menu .ustmenu{float:left;}
+#menu .ustmenu a{display:block; padding:5px; background:#99FF33; border:solid 1px #666666; text-decoration:none;}
+.altmenu{width:150px; color:#333; display:none;}
+.altmenu li a{display:block; padding:5px;}
+#menu .ustmenu a:hover{background:#FF0000; color:#CC0;}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js">
+</script>
+
+<script type="text/javascript">
+$(function(){
+	  $("#menu .ustmenu").hover(function() {
+		  //üzerine geldiğinde
+        $(".altmenu",this).stop().slideDown("slow")
+	  },
+	  function(){
+		  //üzerinden çıktığında
+		   $(".altmenu",this).stop().slideUp("slow");
+		  });
+	   });
+</script>
+
+
+
+<body>
+
+<ul id="menu">
+<li class="ustmenu"><a href="#">Anasayfa</a></li>
+<li class="ustmenu"><a href="#">Hakkımızda</a></li>
+<li class="ustmenu"><a href="#">Ürünler</a>
+        		<ul class="altmenu">
+                            <li><a href="#">Php</a></li>
+                            <li><a href="#">Asp</a></li>
+                            <li><a href="#">Asp.Net</a>                
+                            <li><a href="#">Java</a>
+                            <li><a href="#">Html</a>
+                 </ul>
+</li>
+<li class="ustmenu"><a href="#">İletişim</a></li>
+</ul>
+</body>
+</html>

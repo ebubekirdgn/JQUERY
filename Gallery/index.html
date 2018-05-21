@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<style type="text/css">
+.kapat{float:right;  margin-top:-20px;}
+.kucuk{width:700px; height:130px; margin:auto 20px;}
+.kucuk img{border:solid 3px #0000FF;}
+.kucuk img:hover{border:solid 3px #00FF00;}
+.buyuk{width:600px; height:450px; background:#0F0; border:solid 2px #FF00FF; position:absolute; top:200px; left:300px; padding:10px; display:none}
+.buyuk img{width:600px; height:450px;}
+</style>
+<script src="jquery-1.7.2.min.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+   $(function(){
+	    $(".buyuk img").hide();
+		$(".kucuk img").click(function(e) {
+            $(".buyuk img").hide();
+         	$(".buyuk").fadeIn("slow");
+			var index = $(this).index();
+		   $(".buyuk img:eq("+index+")").show();
+        });
+		  $(".kapat").click(function(e) {
+            $(".buyuk").fadeOut("slow");
+        });
+  
+	   })
+</script>
+
+</head>
+
+<body>
+<div class="kucuk">
+<img src="resim/1.jpg" width="128" height="128" />
+<img src="resim/2.jpg" width="128" height="128" />
+<img src="resim/3.jpg" width="128" height="128" />
+<img src="resim/4.jpg" width="128" height="128" />
+</div>
+
+<div class="buyuk">
+<button class="kapat">X</button>
+<img src="resim/1.jpg" />
+<img src="resim/2.jpg" />
+<img src="resim/3.jpg" />
+<img src="resim/4.jpg"/>
+
+</div>
+
+</body>
+</html>

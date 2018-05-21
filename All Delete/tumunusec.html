@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tümünü Sil</title>
+</head>
+<script src="jquery-1.7.2.min.js" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+  $(function(){
+	 
+	   $("#iptal").click(function(e) {
+         $(".sec:checked").next().animate({"marginLeft":"30px"}).fadeOut("slow").delay(2000,function(){
+		 $(this).prev().remove(); //geri gelmesi istenir yani yazıznın kaybolması ve yazının önündeki checkbox'ı sil diyoruz..
+	    });
+		
+		$("#alt").click(function(e) {
+             $(".sec").next().hide().prev().remove();
+        });
+		
+		$("#ust").click(function(e) {
+             $(".sec:first").next().hide().prev().remove();
+        });
+			 
+    });
+	  })
+
+
+</script>
+<style>
+span{display:block;}
+</style>
+
+<body>
+<form action="" method="post">
+   <hr />
+ <a href="#" id="iptal">Seçilenleri Sil</a> <br />
+     <a href="#" id="alt">En Altı Sil</a> <br />
+     <a href="#" id="ust">En Üsttekini Sil</a><br />
+     <span><input type="checkbox" name="sec" class="sec" /><a href="#">Bir</a>  </span>
+     <span><input type="checkbox" name="sec2" class="sec" /> <a href="#">İki</a> </span>
+     <span><input type="checkbox" name="sec3" class="sec" /> <a href="#">Üç</a></span> 
+     <span><input type="checkbox" name="sec4" class="sec" /> <a href="#">Dört</a> </span>
+     <span> <input type="checkbox" name="sec5" class="sec" /><a href="#">Beş</a> </span>
+ 
+    <span> <input type="checkbox" name="sec6" class="sec" /> <a href="#">Altı</a> 
+   
+ 
+</form>
+</body>
+</html>

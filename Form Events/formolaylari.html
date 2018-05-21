@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+</head>
+<style>
+ span{display:block; margin:10px;}
+ input{width:150px; padding:7px;}
+ button{margin:10px; background:#00F; color:#fff;}
+ form{background:#0099CC; margin:10px; padding:10px; width:200px;}
+ .hata{border:solid;}
+</style>
+<script src="jquery-1.7.2.min.js" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+   $(function(){
+	   
+	    $("input[type='submit']").click(function(e) {
+            // ad textboxının içerisindeki bilgi alınacak
+			var ad = $(".ad").val();
+			ad=$.trim(ad);
+			var soyad = $(".soyad").val();
+			soyad=$.trim(soyad);
+			var yas = $(".yas").val();
+			yas=$.trim(yas);
+			if(ad == "")
+			{
+				$(".ad")
+				$(".ad").addClass("hata");
+				alert("Adnızı Girmediniz...");
+				e.preventDefault();
+			}
+		 	else if(soyad == "")
+			{
+				$(".soyad")
+				$(".soyad").addClass("hata");
+				alert("Soyadınızı Girmediniz...");
+				e.preventDefault();
+			}
+			else if(yas == "")
+			{
+				$(".yas")
+				$(".yas").addClass("hata");
+				alert("Yaşınızı Girmediniz...");
+				e.preventDefault();
+			}
+			 
+				
+        });
+	   
+	   
+	   })
+
+
+</script>
+
+<body>
+<form action="" method="post">
+<span>Ad : <input type="text" name"ad" class="ad" /> </span>
+<span>Soyad : <input type="text" name"soyad" class="soyad" /> </span>
+<span>Yas : <input type="text" name"yas" class="yas" /> </span>
+<span> <input type="submit" value="GÖNDER"/>  </span>
+
+
+</form>
+</body>
+</html>

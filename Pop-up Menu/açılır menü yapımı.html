@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+			$(".menu .anamenu").hover(function(){
+					$("#altmenu",this).stop().slideDown();
+				},
+				function(){
+					$("#altmenu",this).stop().slideUp();
+					}
+	)
+				
+		})
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Açılır Menü</title>
+<style>
+body{ margin:0; padding:0;}
+ul,li{ margin:0; padding:0; list-style:none;}
+.menu{ height:35px;}
+.menu .anamenu{ float:left; border:solid 1px #ddd; position:relative; }
+.menu .anamenu a{ display:block; padding:10px; background:#ccc; color:red; text-decoration:none; border:solid 1px #333;}
+#altmenu{ display:none;  position:absolute; top:45px; width:200px; background:#333; }
+#altmenu li a { display:block; padding:5px;  }
+.menu li a:hover{ background:#900; color:#fff;}
+
+</style>
+</head>
+
+<body>
+<ul class="menu">
+  <li class="anamenu"><a href="#">Anasayfa</a></li>
+  <li class="anamenu"><a href="#">Hakkımızda</a></li>
+  <li class="anamenu"><a href="#">Ürünler</a>
+  		<ul id="altmenu">
+        	<li><a href="#">Buzdolabı</a></li>
+            <li><a href="#">Bulaşık Makinesi</a></li>
+            <li><a href="#">Çamaşır Makinesi</a></li>
+        </ul>
+    </li>
+  <li class="anamenu"><a href="#">İletişim</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+a{display:block; background:#FF0000; width:300px; height:20px; text-decoration:none; color:#FFFFFF;}
+.kutu{width:150px; height:150px; background:#00CCCC;}
+</style>
+<script src="jquery-1.7.2.min.js" type="text/javascript">
+
+</script>
+<script type="text/javascript">
+    
+	   $(function(){
+		   $(".goster").click(function(e) {
+              $(".kutu").show(2000);
+          });
+		    $(".gizle").click(function(e) {
+              $(".kutu").hide(2000);
+          });
+		    $(".slideup").click(function(e) {
+              $(".kutu").slideUp(2000);
+          });
+		    $(".slidedown").click(function(e) {
+              $(".kutu").slideDown(2000);
+          });
+		   $(".fadein").click(function(e) {
+              $(".kutu").fadeIn(2000);
+          });
+		   $(".fadeout").click(function(e) {
+              $(".kutu").fadeOut(2000);
+          });
+		    $(".animate").click(function(e) {
+              $(".kutu").animate({"marginLeft":"1220px"},1000).animate({"margin-top":"1220px"},1000);
+          });
+		   })
+
+</script>
+
+</head>
+
+<body>
+<p><a href="#" class="goster">Göster </a></p>
+<p><a href="#" class="gizle"> Gizle  </a></p>
+<p><a href="#" class="slideup">Slide Up  </a></p>
+<p><a href="#" class="slidedown">Slide Down  </a></p>
+<p><a href="#" class="fadein">Fade In  </a></p>
+<p><a href="#" class="fadeout">Fade Out  </a></p>
+<p><a href="#" class="animate">Animate </a></p>
+
+<div class="kutu">This is Box</div>
+</body>
+</html>
